@@ -1,9 +1,9 @@
-import Navbar from "./components/Navbar"
+import Dropdown from "./components/Dropdown"
 
 function page() {
   return (
-    <main className="bg-white text-gray-800 pt-20 ">
-      <Navbar/>
+    <main className="text-gray-800 pt-31">
+      <Dropdown/>
     </main>
   )
 }
