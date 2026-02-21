@@ -19,7 +19,6 @@ export function DropdownProvider({ children }: { children: React.ReactNode }) {
 
   const toggleDropdown = () => {
     setIsOpen((prev) => !prev);
-    console.log("the dropdown !!!!",isOpen)
   };
 
   return (

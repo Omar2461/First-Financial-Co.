@@ -1,14 +1,44 @@
 "use client";
 
 import { useDropdown } from "@/context/DropdownContext";
+import { useLinks } from "@/context/PagesContext";
+import Link from "next/link";
 
 function Dropdown() {
-  const { isOpen } = useDropdown();
+  const { isOpen, toggleDropdown } = useDropdown();
+  const { links, selected, onChange } = useLinks();
+
+  const handleClick = (name: string) => {
+    onChange(name);
+    toggleDropdown();
+  };
+
+  const renderLinks = links.map(({ name, href }, idx) => {
+    return (
+      <Link key={idx} href={href} onClick={() => handleClick(name)}>
+        <li className={`border p-2 ${selected == name ? "bg-gray-500" : ""}`}>
+          {name}
+        </li>
+      </Link>
+    );
+  });
 
   return (
-    <div className={`bg-amber-300 transition-all duration-300 ease-in-out ${isOpen 
-        ? "opacity-100 translate-y-0 pointer-events-auto" 
-        : "opacity-0 -translate-y-2 pointer-events-none"}`}>Dropdown</div>
+    <ul
+      className={`
+    absolute top-full left-0 w-full
+    bg-white shadow-md text-black
+    transition-all duration-300 ease-in-out
+    origin-top
+    ${
+      isOpen
+        ? "opacity-100 translate-y-0 scale-y-100"
+        : "opacity-0 -translate-y-2 scale-y-95 pointer-events-none"
+    }
+  `}
+    >
+      {renderLinks}
+    </ul>
   );
 }
 

@@ -2,6 +2,8 @@ import "./globals.css";
 import { Tajawal } from "next/font/google";
 
 import { DropdownProvider } from "@/context/DropdownContext";
+import { PageProvider } from "@/context/PagesContext";
+
 import Navbar from "./components/Navbar";
 
 const tajawal = Tajawal({
@@ -16,13 +18,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      <DropdownProvider>
-        <body className={tajawal.className}>
-          {" "}
-          <Navbar />
-          {children}
-        </body>
-      </DropdownProvider>
+      <PageProvider>
+        <DropdownProvider>
+          <body className={tajawal.className}>
+            {" "}
+            <Navbar />
+            {children}
+          </body>
+        </DropdownProvider>
+      </PageProvider>
     </html>
   );
 }

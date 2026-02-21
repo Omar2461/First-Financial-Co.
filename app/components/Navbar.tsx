@@ -4,20 +4,21 @@ import Image from "next/image";
 
 import { MdWhatsapp } from "react-icons/md";
 import { IoMenu } from "react-icons/io5";
+import { IoMdClose } from "react-icons/io";
 
 import NavLinks from "./NavLinks";
 import { useDropdown } from "@/context/DropdownContext";
+import Dropdown from "./Dropdown";
 
 function Navbar() {
-
-const {toggleDropdown}=useDropdown();
+  const { isOpen, toggleDropdown } = useDropdown();
 
   return (
-    <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <nav className="bg-[#f3f0e6] shadow-md relative top-0 left-0 w-full z-50">
       <div className="container mx-auto flex justify-center items-center p-4">
-        <div className="flex-initial flex md:justify-end w-100 border ">
+        <div className="flex-initial flex md:justify-center w-100 ">
           <Image
-            className="w-auto"
+            className="w-auto md:w-30"
             src="https://res.cloudinary.com/dijoz9ie7/image/upload/v1771399001/alqawaemcpa-logo-nobackground_hufd28.png"
             alt="Logo"
             width={180}
@@ -28,17 +29,29 @@ const {toggleDropdown}=useDropdown();
 
         <NavLinks />
 
-        <div className="hidden md:flex md:flex-initial md:justify-start md:w-120  text-black">
-          <button className="font-bold flex justify-center items-center text-sm rounded-lg shadow-xl/30 border gap-1 py-2 px-4
-           hover:scale-115 transition-all duration-400 text-black">
-            <MdWhatsapp /> تواصل معنا
+        <div className="hidden md:flex md:flex-initial md:justify-center md:w-120 text-black">
+          <button
+            className="bg-linear-to-b from-[#8C8C70]  to-[#505041]  font-bold flex justify-center items-center text-lg rounded-lg shadow-xl/30  gap-1 py-2 px-4
+           hover:scale-115 transition-all duration-400 text-white"
+          >
+            تواصل معنا
+            <MdWhatsapp />
           </button>
         </div>
-
-        <IoMenu className="md:hidden border absolute left-15 text-4xl text-black" onClick={()=>toggleDropdown()}>
-          ☰
-        </IoMenu>
+        {isOpen ? (
+          <IoMdClose
+            className="md:hidden bg-[#b8b8a4] absolute left-15 text-4xl text-black"
+            onClick={() => toggleDropdown()}
+          />
+        ) : (
+          <IoMenu
+            className="md:hidden bg-[#b8b8a4] absolute left-15 text-4xl text-black"
+            onClick={() => toggleDropdown()}
+          />
+        )}
       </div>
+
+      <Dropdown />
     </nav>
   );
 }

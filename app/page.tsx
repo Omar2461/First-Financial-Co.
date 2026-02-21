@@ -1,9 +1,9 @@
-import Dropdown from "./components/Dropdown"
+import Hero from "./components/Hero"
 
 function page() {
   return (
-    <main className="text-gray-800 pt-31">
-      <Dropdown/>
+    <main className="">
+      <Hero/>
     </main>
   )
 }

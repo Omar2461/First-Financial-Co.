@@ -1,17 +1,13 @@
 "use client";
 
 import Link from "next/link";
+
 import { useState } from "react";
+import { useLinks } from "@/context/PagesContext";
 
 function NavLinks() {
   const [isOpen, setIsOpen] = useState("");
-
-  const links = [
-    { name: "الرئيسية", href: "#" },
-    { name: "من نحن؟", href: "#" },
-    { name: "خدماتنا", href: "#" },
-    { name: "المدونة", href: "#" },
-  ];
+  const {links} = useLinks();
 
   const onClick = (name: string) => {
     setIsOpen(name);
@@ -19,17 +15,17 @@ function NavLinks() {
 
   const renderNavLinks = links.map(({ href, name }, idx) => {
     return (
-      <div
+      <li
         key={idx}
-        className={`w-20 h-9 flex justify-center border-b-[3px]  items-center text-black
+        className={`w-20 h-9 flex justify-center border-b-[3px]  items-center 
          hover:border-b-3 hover:border-[#A9963A] hover:text-[#A9963A] transition-colors duration-450
-        ${isOpen == name ? "border-b-3 border-[#A9963A] text-[#A9963A]" : "border-transparent"}
+        ${isOpen == name ? "border-b-3 border-[#A9963A] text-[#A9963A]" : "border-transparent text-black"}
          `}
       >
         <Link href={href} onClick={() => onClick(name)}>
           {name}
         </Link>
-      </div>
+      </li>
     );
   });
 
