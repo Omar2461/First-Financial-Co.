@@ -14,11 +14,16 @@ function Navbar() {
   const { isOpen, toggleDropdown } = useDropdown();
 
   return (
-    <nav className="bg-[#f3f0e6] shadow-md relative top-0 left-0 w-full z-50">
-      <div className="container mx-auto flex justify-center items-center p-4">
-        <div className="flex-initial flex md:justify-center w-100 ">
+    <nav className="bg-[#f3f0e6] shadow-md relative top-0 left-0 w-full z-50 bg-cover bg-center"
+    style={{
+        backgroundImage:
+          "url('https://res.cloudinary.com/dijoz9ie7/image/upload/v1772056991/Gemini_Generated_Image_ieqpm7ieqpm7ieqp_pnbpdr.png')",
+      }}
+    >
+      <div className="container mx-auto flex justify-center items-center p-4 lg:p-7">
+        <div className="flex-initial flex md:justify-center lg:justify-start xl:justify-end w-100 lg:w-85 xl:w-100">
           <Image
-            className="w-auto md:w-30"
+            className="w-auto md:w-30 lg:w-38 xl:w-43"
             src="https://res.cloudinary.com/dijoz9ie7/image/upload/v1771399001/alqawaemcpa-logo-nobackground_hufd28.png"
             alt="Logo"
             width={180}
@@ -29,10 +34,10 @@ function Navbar() {
 
         <NavLinks />
 
-        <div className="hidden md:flex md:flex-initial md:justify-center md:w-120 text-black">
+        <div className="hidden md:flex md:flex-initial md:justify-center xl:justify-start md:w-120 text-black">
           <button
-            className="bg-linear-to-b from-[#8C8C70]  to-[#505041]  font-bold flex justify-center items-center text-lg rounded-lg shadow-xl/30  gap-1 py-2 px-4
-           hover:scale-115 transition-all duration-400 text-white"
+            className="bg-linear-to-b from-[#8C8C70]  to-[#505041] font-bold flex justify-center items-center text-lg rounded-lg shadow-xl/30  gap-1 py-2 px-4
+           hover:scale-112  transition-all duration-400 text-white"
           >
             تواصل معنا
             <MdWhatsapp />

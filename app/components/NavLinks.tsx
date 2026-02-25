@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useLinks } from "@/context/PagesContext";
 
-function NavLinks() {
+function NavLinks({className}: {className?: string}) {
   const [isOpen, setIsOpen] = useState("");
   const {links} = useLinks();
 
@@ -30,7 +30,7 @@ function NavLinks() {
   });
 
   return (
-    <ul className="hidden md:flex flex-initial md:justify-center md:w-140 font-medium ">
+    <ul className={`hidden md:flex flex-initial md:justify-center md:w-140 lg:text-[18px] font-medium xl:gap-3 ${className}`}>
       {renderNavLinks}
     </ul>
   );
