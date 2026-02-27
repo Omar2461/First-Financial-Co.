@@ -16,7 +16,7 @@ function Dropdown() {
   const renderLinks = links.map(({ name, href }, idx) => {
     return (
       <Link key={idx} href={href} onClick={() => handleClick(name)}>
-        <li className={`border p-2 ${selected == name ? "bg-gray-500" : ""}`}>
+        <li className={`border border-[#3E444C] p-2 ${selected == name ? "bg-[#3E444C]" : ""}`}>
           {name}
         </li>
       </Link>
@@ -27,7 +27,7 @@ function Dropdown() {
     <ul
       className={`
     absolute top-full left-0 w-full
-    bg-white shadow-md text-black
+    bg-[#6B6D55] shadow-md text-white
     transition-all duration-300 ease-in-out
     origin-top
     ${
