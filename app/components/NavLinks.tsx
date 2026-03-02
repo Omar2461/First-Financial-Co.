@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useLinks } from "@/context/PagesContext";
 
 function NavLinks({className}: {className?: string}) {
-  const [isOpen, setIsOpen] = useState("");
+  const [isOpen, setIsOpen] = useState("الرئيسية");
   const {links} = useLinks();
 
   const onClick = (name: string) => {

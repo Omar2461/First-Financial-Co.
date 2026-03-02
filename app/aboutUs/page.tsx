@@ -1,6 +1,11 @@
+import AboutUs from "../components/pages/AboutUs";
+
 function page() {
-  console.log("hi in aboutUs");
-  return <div>من نحن؟</div>;
+  return (
+    <div>
+      <AboutUs />
+    </div>
+  );
 }
 
 export default page;
