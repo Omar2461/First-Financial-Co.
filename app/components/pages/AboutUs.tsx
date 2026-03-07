@@ -1,98 +1,56 @@
 import { FaEye } from "react-icons/fa";
 import { GrMailOption } from "react-icons/gr";
 import { FaMedal } from "react-icons/fa";
+
+import Card from "../Card";
 import { MdWhatsapp } from "react-icons/md";
 
 import Button from "../Button";
 
 function AboutUs() {
   return (
-    <section className="bg-[#f4f4f4] py-20 px-6">
+    <section className="bg-[#f4f4f4] py-20 px-6 sm:py-30 sm:px-15 2xl:py-20">
       <div className="max-w-6xl mx-auto">
-        {/* Main Layout */}
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          {/* Text Side */}
-          <div className="w-full lg:w-1/2 text-center lg:text-right space-y-6">
+
+        <div className="relative flex flex-col 2xl:w-250 2xl:h-100 2xl:mr-20 sm:flex-row lg:flex-row items-center sm:items-start gap-16 ">
+
+          <div className="w-full sm:w-70 sm:mt-10 lg:mt-20 2xl:mt-10 flex flex-col md:items-center lg:w-1/2 text-center space-y-10">
             <h2 className="text-4xl font-bold text-[#3f3f3f]">من نحن؟</h2>
 
-            <p className="text-gray-700 leading-loose text-lg">
+            <p className="text-gray-700 sm:leading-5 lg:leading-normal text-md sm:text-lg 2xl:text-[17px]">
               نحن في شركة القوائم الأولى نقدم مجموعة شاملة من الخدمات المحاسبية
               والمالية للشركات والمؤسسات بمختلف أنواعها، حيث نركز في المقام
               الأول على مساعدة عملائنا في تحقيق تطلعاتهم وأهدافهم المالية بكفاءة
-              واحترافية.
+              واحترافية. نسعى دائمًا إلى تحقيق التوازن بين الجهود المالية
+              والإدارية بما يضمن استدامة النجاح، كما نحرص على بناء علاقات قائمة
+              على الثقة والولاء من خلال جودة خدماتنا وتميز أدائنا. نؤمن بأن
+              التميز يكمن في الطريقة التي نعالج بها تحديات عملائنا، ولهذا نقدم
+              حلولًا مهنية مبتكرة تختلف عن منافسينا وتحقق نتائج ملموسة تسهم في
+              نمو أعمالهم بثبات.
             </p>
-
-            <p className="text-gray-700 leading-loose text-lg">
-              نسعى دائماً إلى تحقيق التوازن بين الجهود المالية والإدارية بما
-              يضمن استدامة النجاح. كما نحرص على بناء علاقات قائمة على الثقة
-              والولاء من خلال جودة خدماتنا وتميز أدائنا.
-            </p>
-
-            {/* Button */}
-            {/* <div className="pt-6">
-              <Button>
-                تواصل معنا
-                <MdWhatsapp />
-              </Button>
-            </div> */}
           </div>
 
-          {/* Cards Side */}
+          <div className="flex flex-col sm:w-80 gap-4 w-full 2xl:h-100 lg:w-1/2 border">
+            <Card icon={<FaEye className="text-white" />} title="رؤيتنا">
+              أن نساهم في تحقيق رؤية 2030 عبر حلول مالية مبتكرة تعزز الشفافية
+              والاستدامة
+            </Card>
 
-          <div className="flex flex-col gap-8 w-full lg:w-1/2">
-            {/* Card 1 */}
-            <div className="bg-[#a7a482] border-2 border-[#3f3f3f] rounded-2xl shadow-[4px_6px_0px_#3f3f3f] p-6 flex items-center justify-between">
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2">رؤيتنا</h3>
-                <p className="text-white text-sm leading-relaxed">
-                  أن نساهم في تحقيق رؤية 2030 عبر حلول مالية مبتكرة تعزز
-                  الشفافية والاستدامة
-                </p>
-              </div>
-              <div className="bg-[#8e8c6f] p-4 rounded-full">
-                <FaEye className="text-white" />
-              </div>
-            </div>
+            <Card icon={<GrMailOption className="text-white" />} title="رسالتنا">
+              نقدم خدمات محاسبية احترافية تعتمد على الدقة والابتكار لبناء الثقة
+              وتحقيق النمو المستدام لعملائنا
+            </Card>
 
-            {/* Card 2 */}
-            <div className="bg-[#a7a482] border-2 border-[#3f3f3f] rounded-2xl shadow-[4px_6px_0px_#3f3f3f] p-6 flex items-center justify-between">
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2">رسالتنا</h3>
-                <p className="text-white text-sm leading-relaxed">
-                  نقدم خدمات محاسبية احترافية تعتمد على الدقة والابتكار لبناء
-                  الثقة وتحقيق النمو المستدام لعملائنا
-                </p>
-              </div>
-              <div className="bg-[#8e8c6f] p-4 rounded-full">
-                <GrMailOption className="text-white" />
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-[#a7a482] border-2 border-[#3f3f3f] rounded-2xl shadow-[4px_6px_0px_#3f3f3f] p-6 flex items-center justify-between">
-              <div>
-                <h3 className="text-xl font-bold text-white mb-2">قيمنا</h3>
-                <p className="text-white text-sm leading-relaxed">
-                  النزاهة - الشفافية - الالتزام - الابتكار - الشراكة
-                </p>
-              </div>
-              <div className="bg-[#8e8c6f] p-4 rounded-full">
-                <FaMedal className="text-white" />
-              </div>
-            </div>
+            <Card icon={<FaMedal className="text-white" />} title="قيمنا" className="2xl:ml-12 xl:ml-30 ">
+              النزاهة - الشفافية - الالتزام - الابتكار - الشراكة
+            </Card>
           </div>
-
-
- {/* Button */}
-            <div>
-              <Button>
-                تواصل معنا
-                <MdWhatsapp />
-              </Button>
-            </div>
-
-
-
+           <div className="w-fit absolute -bottom-20 right-20 sm:right-60 lg:right-95 xl:right-120 2xl:right-105">
+            <Button>
+              تواصل معنا
+              <MdWhatsapp />
+            </Button>
+          </div>
         </div>
       </div>
     </section>
