@@ -10,11 +10,14 @@ export default function Hero() {
   return (
     <section
       className="relative overflow-hidden bg-cover bg-center"
-      style={{
-        backgroundImage:
-          "url('https://res.cloudinary.com/dijoz9ie7/image/upload/v1771697534/Gemini_Generated_Image_k4lmkbk4lmkbk4lm_az0jxd.png')",
-      }}
     >
+      <Image
+        src="https://res.cloudinary.com/dijoz9ie7/image/upload/v1771697534/Gemini_Generated_Image_k4lmkbk4lmkbk4lm_az0jxd.png"
+        alt="background"
+        fill
+        priority
+        className="object-cover -z-10"
+      />
       <div
         className="container text-center mx-auto h-200  md:px-6 lg:py-24 flex flex-col items-center sm:items-start md:flex-row pt-30 sm:pt-65 relative 
      xl:py-20 xl:pl-0 xl:pr-0 transition-all duration-400
@@ -48,9 +51,11 @@ export default function Hero() {
           ومتوافقة مع أعلى المعايير المهنية.
         </p>
 
-        <div className="w-fit h-fit flex gap-5 mt-10 sm:mt-0 sm:absolute sm:bottom-45 sm:right-50 md:bottom-55 md:right-80
-         2xl:bottom-40 2xl:right-150 transition-all duration-400">
-          <Button>
+        <div
+          className="w-fit h-fit flex gap-5 mt-10 sm:mt-0 sm:absolute sm:bottom-45 sm:right-50 md:bottom-42 md:right-50
+         2xl:bottom-40 2xl:right-150 transition-all duration-400"
+        >
+          <Button href="https://wa.me/201142563801">
             تواصل معنا
             <MdWhatsapp />
           </Button>

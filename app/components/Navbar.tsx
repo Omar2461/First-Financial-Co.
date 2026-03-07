@@ -37,7 +37,7 @@ function Navbar() {
         <NavLinks />
 
         <div className="hidden md:flex md:flex-initial md:justify-center xl:justify-start md:w-120 text-black">
-          <Button>
+          <Button href="https://wa.me/201142563801">
             تواصل معنا
             <MdWhatsapp />
           </Button>

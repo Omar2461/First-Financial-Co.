@@ -4,7 +4,7 @@ import WhyChooseUs from "./components/pages/WhyChooseUs"
 
 function page() {
   return (
-    <main className="">
+    <main>
       <Hero/>
       <AboutUs/>
       <WhyChooseUs/>

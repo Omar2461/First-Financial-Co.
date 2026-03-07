@@ -9,7 +9,7 @@ import Button from "../Button";
 
 function AboutUs() {
   return (
-    <section className="bg-[#f4f4f4] py-20 px-6 sm:py-30 sm:px-15 2xl:py-20">
+    <section className="bg-[#f4f4f4] py-30 px-6 sm:py-30 sm:px-15 2xl:py-30 transition-all duration-400">
       <div className="max-w-6xl mx-auto">
 
         <div className="relative flex flex-col 2xl:w-250 2xl:h-100 2xl:mr-20 sm:flex-row lg:flex-row items-center sm:items-start gap-16 ">
@@ -17,7 +17,7 @@ function AboutUs() {
           <div className="w-full sm:w-70 sm:mt-10 lg:mt-20 2xl:mt-10 flex flex-col md:items-center lg:w-1/2 text-center space-y-10">
             <h2 className="text-4xl font-bold text-[#3f3f3f]">من نحن؟</h2>
 
-            <p className="text-gray-700 sm:leading-5 lg:leading-normal text-md sm:text-lg 2xl:text-[17px]">
+            <p className="text-gray-700 sm:leading-5 lg:leading-normal text-md sm:text-lg 2xl:text-[17px] ">
               نحن في شركة القوائم الأولى نقدم مجموعة شاملة من الخدمات المحاسبية
               والمالية للشركات والمؤسسات بمختلف أنواعها، حيث نركز في المقام
               الأول على مساعدة عملائنا في تحقيق تطلعاتهم وأهدافهم المالية بكفاءة
@@ -45,8 +45,8 @@ function AboutUs() {
               النزاهة - الشفافية - الالتزام - الابتكار - الشراكة
             </Card>
           </div>
-           <div className="w-fit absolute -bottom-20 right-20 sm:right-60 lg:right-95 xl:right-120 2xl:right-105">
-            <Button>
+           <div className="w-fit absolute -bottom-20 right-20 sm:right-60 lg:right-95 xl:right-120 2xl:right-105 transition-all duration-400">
+            <Button href="https://wa.me/201142563801">
               تواصل معنا
               <MdWhatsapp />
             </Button>
