@@ -2,9 +2,12 @@ import { FaHandshake } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 import { FaBookReader } from "react-icons/fa";
 
+
 function WhyChooseUs() {
   return (
     <section className="relative py-20 overflow-hidden">
+     
+
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{

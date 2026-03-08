@@ -60,7 +60,7 @@ export default function Hero() {
             <MdWhatsapp />
           </Button>
 
-          <Button>
+          <Button href="/aboutUs">
             اكتشف المزيد
             <FaArrowRight />
           </Button>
