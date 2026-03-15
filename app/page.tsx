@@ -22,6 +22,7 @@ function page() {
           </p>
         </div>
       </div>
+      
     </main>
   );
 }
