@@ -9,13 +9,14 @@ import { MdWhatsapp } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa6";
 
 export default function Hero() {
+
   return (
     <section className="relative overflow-hidden bg-cover bg-center">
       <Image
         src="https://res.cloudinary.com/dijoz9ie7/image/upload/v1771697534/Gemini_Generated_Image_k4lmkbk4lmkbk4lm_az0jxd.png"
         alt="background"
         fill
-        priority
+        
         className="object-cover -z-10"
       />
       <div
@@ -34,7 +35,7 @@ export default function Hero() {
           "
           >
             <motion.div
-              initial={{ x: 500, opacity: 0 }}
+              initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
@@ -89,7 +90,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ x: -500, opacity: 0 }}
+          initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
