@@ -35,7 +35,7 @@ export default function Hero() {
           "
           >
             <motion.div
-              initial={{ x: 100, opacity: 0 }}
+              initial={{ x: 60, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}

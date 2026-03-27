@@ -1,4 +1,8 @@
-function OurServices({className}: {className?: string}) {
+"use client";
+
+import { motion } from "framer-motion";
+
+function OurServices({ className }: { className?: string }) {
   const services = [
     {
       title: "مسك الدفاتر",
@@ -27,12 +31,17 @@ function OurServices({className}: {className?: string}) {
   ];
 
   return (
-    <section className={`bg-gray-100 pt-20 ${className || ''}`}>
-
+    <section className={`bg-gray-100 pt-20 ${className || ""}`}>
       <div className="max-w-7xl mx-auto xl:px-35">
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 place-items-center">
+        <div
+          className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 place-items-center"
+        >
           {services.map((service, index) => (
-            <div
+            <motion.div
+              initial={{ x: 60, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
               key={index}
               className="
               relative
@@ -59,7 +68,7 @@ function OurServices({className}: {className?: string}) {
                   {service.desc}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -67,4 +76,4 @@ function OurServices({className}: {className?: string}) {
   );
 }
 
-export default OurServices
+export default OurServices;
