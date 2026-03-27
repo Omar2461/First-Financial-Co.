@@ -6,7 +6,7 @@ import Blog from "../pages/Blog";
 function OurBlogSection() {
   return (
    <div className="relative bg-[#ebebe7]">
-        <Blog className="pt-60 pb-20"/>
+        <Blog className="pt-70 pb-20"/>
         <div className=" text-center md:flex md:items-center md:right-20 xl:right-70 absolute top-30 left-0 right-0">
           <motion.div
             initial={{ opacity: 0, scale: 0.6 }}
