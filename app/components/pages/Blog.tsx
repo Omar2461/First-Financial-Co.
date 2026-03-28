@@ -48,7 +48,7 @@ function Blog({ className }: { className?: string }) {
             className="bg-white rounded-2xl shadow-md overflow-hidden w-85 lg:w-110 xl:w-85 hover:shadow-xl transition-shadow duration-300"
           >
             <div className="relative h-48 w-full overflow-hidden">
-              <div className="absolute inset-0 bg-linear-to-b from-black/5 to-black/35 "></div>
+              <div className="absolute inset-0 bg-linear-to-b from-black/0 to-black/20 "></div>
               <Image
                 src={item.image}
                 alt={item.title}

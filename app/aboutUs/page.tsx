@@ -1,6 +1,7 @@
 import AboutUs from "../components/pages/AboutUs";
 import WhyChooseUs from "../components/pages/WhyChooseUs";
 import Pane from "../components/Pane";
+import ClientsSection from "../components/sections/ClientsSection";
 
 function page() {
   return (
@@ -11,6 +12,7 @@ function page() {
       />
       <AboutUs />
       <WhyChooseUs />
+      <ClientsSection />
     </div>
   );
 }

@@ -4,6 +4,8 @@ import AboutUs from "./components/pages/AboutUs";
 import WhyChooseUs from "./components/pages/WhyChooseUs";
 import OurServicesSection from "./components/sections/OurServicesSection";
 import OurBlogSection from "./components/sections/OurBlogSection";
+import ClientsSection from "./components/sections/ClientsSection";
+// import Footer from "./components/Footer";
 
 function page() {
   return (
@@ -14,6 +16,9 @@ function page() {
 
       <OurServicesSection />
       <OurBlogSection />
+      <ClientsSection />
+
+      {/* <Footer /> */}
     </main>
   );
 }
